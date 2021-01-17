@@ -39,6 +39,14 @@ header, .call-to-act, nav {
 .flex {
     display: flex;
 }
+.col {
+    padding: 10px 20px;
+    width: 50%;
+}
+.col-small {
+    width: 45%;
+}
+
 .content-center {
     align-items: center;
 }
@@ -184,13 +192,6 @@ nav {
     right: 0;
     margin-top: 2px;
 }
-.col {
-    padding: 10px 20px;
-    width: 50%;
-}
-.col-small {
-    width: 45%;
-}
 
 .testimonials {
     background-image: linear-gradient(0deg,#1c2230,hsl(218, 28%, 13%));
@@ -305,9 +306,13 @@ footer > .flex {
     width: 90%;
     line-height: 25px;
 }
-.contact-info,
-.about-list {
+.contact-info
+{
     width: 20%;
+}
+.about-list,
+.contact-list {
+    width: 15%;
 }
 footer .info-wrapper{
     margin-top: 20px;
@@ -408,6 +413,22 @@ footer .sm-heading {
     }
     footer {
         padding: 50px;
+    }
+}
+@media(max-width: 768px){
+    footer .info-wrapper {
+        flex-wrap: wrap;
+    }
+    .site-desc {
+        width: 50%;
+    }
+    .contact-info, .contact-list, .social-icon, .about-list{
+        width: 50%!important;
+        margin-bottom: 50px;
+    }
+
+    .about-list {
+        text-align: center;
     }
 }
 @media(max-width: 767.98px){
@@ -541,6 +562,9 @@ footer .sm-heading {
     .sub-box .btn-primary {
         width: 100%;
     }
+    .testimonials .flex {
+        flex-direction: column;
+    }
 }
 .social-icon a:hover {
     color: #3afcdc;
@@ -670,4 +694,13 @@ footer .sm-heading {
 @keyframes scaleUp {
     from {opacity: 0;transform: scale(.4);}
     to {opacity: 1;transform: scale(1);}
+}
+.sap  {
+    padding: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.creater-name {
+    color: #0ca8cf;
+    font-weight: 700;
 }
